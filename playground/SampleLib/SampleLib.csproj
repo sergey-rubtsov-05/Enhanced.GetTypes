@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Enhanced.GetTypes.Annotation\Enhanced.GetTypes.Annotation.csproj" />
+        <ProjectReference Include="..\..\src\Enhanced.GetTypes.SourceGenerator\Enhanced.GetTypes.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+    </ItemGroup>
+
+</Project>
