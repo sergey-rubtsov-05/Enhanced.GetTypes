@@ -1,7 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Authors>duskembayev</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageId>Enhanced.GetTypes</PackageId>
+    <RepositoryUrl>https://github.com/duskembayev/Enhanced.GetTypes</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/duskembayev/Enhanced.GetTypes</PackageProjectUrl>
+    <PackageTags>gettypes, reflection, assembly, types, generator, sourcegenerator</PackageTags>
+    <PackageIcon>icons/icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageDescription>Enhanced.GetTypes is a NuGet package for simplified types retrieval in .NET Core applications. It uses a source generator for explicit types retrieval without reflection.</PackageDescription>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\images\icon.png" Pack="true" PackagePath="icons" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Enhanced.GetTypes.SourceGenerator\Enhanced.GetTypes.SourceGenerator.csproj" ReferenceOutputAssembly="false" />
+    <None Include="..\Enhanced.GetTypes.SourceGenerator\bin\$(Configuration)\netstandard2.0\Enhanced.GetTypes.SourceGenerator.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+  </ItemGroup>
 
 </Project>
