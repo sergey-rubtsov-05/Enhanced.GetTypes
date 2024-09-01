@@ -42,7 +42,7 @@ internal class DerivedTypesLookupVisitor(DerivedTypesAttributeData attribute) : 
             return false;
         }
 
-        if (!attribute.IncludeAbstract && symbol.IsAbstract)
+        if (!attribute.IncludeAbstract && symbol is { IsAbstract: true, TypeKind: TypeKind.Class })
         {
             return false;
         }
