@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "playground", "playground", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleLib", "playground\SampleLib\SampleLib.csproj", "{6688D6D1-9BEA-457A-921A-BE2874C2993F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{80F51C35-BAE8-4037-A29C-FE8A9466C937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enhanced.GetTypes.Tests", "tests\Enhanced.GetTypes.Tests\Enhanced.GetTypes.Tests.csproj", "{FCC81115-783D-46D4-A5D8-0A25EED9A5F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +32,15 @@ Global
 		{6688D6D1-9BEA-457A-921A-BE2874C2993F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6688D6D1-9BEA-457A-921A-BE2874C2993F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6688D6D1-9BEA-457A-921A-BE2874C2993F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC81115-783D-46D4-A5D8-0A25EED9A5F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC81115-783D-46D4-A5D8-0A25EED9A5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC81115-783D-46D4-A5D8-0A25EED9A5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC81115-783D-46D4-A5D8-0A25EED9A5F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B4845313-EA55-46AD-8346-5EC7BDBBD00F} = {B90371A4-96D6-4167-95C0-3F0995421BAA}
 		{80683002-DC2D-4E70-A213-37BB1F2D18C8} = {B90371A4-96D6-4167-95C0-3F0995421BAA}
 		{6688D6D1-9BEA-457A-921A-BE2874C2993F} = {572D9DE8-2C69-47D4-8C69-3E1BC7D5AD65}
+		{FCC81115-783D-46D4-A5D8-0A25EED9A5F6} = {80F51C35-BAE8-4037-A29C-FE8A9466C937}
 	EndGlobalSection
 EndGlobal
