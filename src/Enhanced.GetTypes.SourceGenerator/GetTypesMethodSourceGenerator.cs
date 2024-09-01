@@ -119,7 +119,7 @@ internal class GetTypesMethodSourceGenerator : IIncrementalGenerator
         {
             foreach (var derivedType in derivedTypesVisitor.DerivedTypes)
             {
-                writer.WriteLine($"yield return typeof({derivedType.ToDisplayString()});");
+                writer.WriteLine($"yield return typeof({derivedType.ToDisplayString().Replace("<T>", "<>")});");
             }
 
             writer.WriteLine("yield break;");

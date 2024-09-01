@@ -5,7 +5,16 @@ internal static class SymbolExtensions
     public static bool InheritsFrom(this ITypeSymbol type, ITypeSymbol baseType)
     {
         return baseType.TypeKind == TypeKind.Interface
-            ? type.AllInterfaces.Any(t => SymbolEqualityComparer.Default.Equals(t, baseType))
+            ? type.AllInterfaces.Any(t =>
+            {
+                if (baseType is INamedTypeSymbol { IsUnboundGenericType: true })
+                {
+                    var unboundGenericType = t.ConstructUnboundGenericType();
+                    return SymbolEqualityComparer.Default.Equals(unboundGenericType, baseType);
+                }
+
+                return SymbolEqualityComparer.Default.Equals(t, baseType);
+            })
             : type.GetBaseTypes().Any(t => SymbolEqualityComparer.Default.Equals(t, baseType));
     }
 
